@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Rolim Sales
+    given-names: Matheus
+    orcid: https://orcid.org/0000-0002-1121-6371
+title: "tunable-billiard"
+version: 1.0.1
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.11495600
+date-released: 2024-06-06
+repository-code: "https://github.com/mrolims/tunable-billiard.git"
