@@ -8,25 +8,14 @@ Usage: python survival_probability_vs_pos.py
 
 Author: Matheus Rolim Sales
 Email: matheusrolim95@gmail.com
-Last updated: 24/04/2024
+Last updated: 06/06/2024
 """
 import numpy as np
 import time
 from functions import *
-from getpass import getuser
 
-# --- ATTENTION ---#
 # The path variable defines the path to where the data will be stored.
-# Please update the following lines accordingly
-user = getuser()
-if user == "rolim" or user == "matheus":
-    path = "/home/%s/Pesquisa/TunableBilliard/Data" % user
-elif user == "jdsjunior" or user == "jdanilo":
-    path = "/home/%s/Matheus/Pesquisa/TunableBilliard/Data" % user
-else:
-    print("Unable to assign path!")
-    import sys
-    sys.exit()
+path = "Data"
 # ----------------------- #
 # --- Parameter gamma --- #
 # ----------------------- #

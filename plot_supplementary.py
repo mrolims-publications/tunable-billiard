@@ -5,7 +5,6 @@ from string import ascii_lowercase
 import pandas as pd
 from joblib import Parallel, delayed
 from functions import *
-import getpass
 
 def main(args):
 
@@ -21,8 +20,10 @@ def main(args):
     eN = int(np.log10(N))
     bN = int(N/10**eN)
     grid = 1080
-    user = getpass.getuser()
-    path = "/home/%s/Pesquisa/TunableBilliard" % user
+    # The path_data variable defines the path to where the data will be stored.
+    path_data = "Data"
+    # The path_figures variable defines the path to where the figures will be stored.
+    path_figures = "Figures"
 
     plot_params(fontsize=18)
     fig, ax = plt.subplots(2, 3, sharex=True, sharey=True, figsize=(11, 5.8))
@@ -44,7 +45,7 @@ def main(args):
     dalpha = 0.5
     hs = [0.01, 0.05, 0.08, 0.12, 0.15, 0.20]
     for i, h in enumerate(hs):
-        df = "%s/Data/escape_basin_gamma=%i_eps=%.5f_h=%.3f_N=%ie%i_grid=%i_numexits=%i.dat" % (path, gamma, eps, h, bN, eN, grid, num_exits)
+        df = "%s/escape_basin_gamma=%i_eps=%.5f_h=%.3f_N=%ie%i_grid=%i_numexits=%i.dat" % (path_data, gamma, eps, h, bN, eN, grid, num_exits)
         print("Extracting data from %s..." % df)
         df = pd.read_csv(df, header=None, delim_whitespace=True)
         x = np.array(df[0])
@@ -70,7 +71,7 @@ def main(args):
     cbar.ax.set_yticklabels(tick_labels)
 
     plt.subplots_adjust(left=0.107, bottom=0.0925, right=0.955, top=0.95, hspace=0.1, wspace=0.08)
-    figname = "%s/Figures/%iexits/%s.png" % (path, num_exits, iii)
+    figname = "%s/%iexits/%s.png" % (path_figures, num_exits, iii)
     print("Saving in %s..." % figname)
     plt.savefig(figname, dpi=300)
     plt.close()
@@ -87,6 +88,4 @@ if __name__ == "__main__":
     num_exits = [2]
 
     for num_exit in num_exits:
-        """for i, eps in enumerate(epss):
-            main([i, eps, num_exit])"""
         Parallel(n_jobs=2)(delayed(main)([i, epss[i], num_exit]) for i in range(len(epss)))

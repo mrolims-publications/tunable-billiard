@@ -8,18 +8,16 @@ Usage: python basin_entropy_from_data.py
 
 Author: Matheus Rolim Sales
 Email: matheusrolim95@gmail.com
-Last updated: 24/04/2024
+Last updated: 05/06/2024
 """
 
 import numpy as np
 import pandas as pd
 from functions import *
-import getpass
 import sys
 
-
-user = getpass.getuser()
-path = "/home/%s/Pesquisa/TunableBilliard/Data" % user
+# The path variable defines the path to where the data will be stored.
+path = "Data"
 
 gamma = 3
 eps_ini = 0.2

@@ -9,7 +9,7 @@ where num_exits = 2 or 3.
 
 Author: Matheus Rolim Sales
 Email: matheusrolim95@gmail.com
-Last updated: 05/05/2024
+Last updated: 05/06/2024
 """
 
 import numpy as np
@@ -50,19 +50,8 @@ def escape_basin_vs_h(args):
     exponent = int(np.log10(N))
     base = int(N/10**(exponent))
     grid = 1080 # Grid size
-    # ----------------- #
-    # --- ATTENTION --- #
-    # ----------------- #
     # The path variable defines the path to where the data will be stored.
-    # Please update the following lines accordingly
-    user = getpass.getuser()
-    if user == "matheus" or user == "rolim":
-        path = "/home/%s/Pesquisa/TunableBilliard/Data" % user
-    elif user == "jdanilo" or user == "jdsjunior":
-        path = "/home/%s/Matheus/Pesquisa/TunableBilliard/Data" % user
-    else:
-        print("Cannot assign path!")
-        sys.exit()
+    path = "Data"
 
     # Calculates the escape_basin for different h
     for h in hs:
