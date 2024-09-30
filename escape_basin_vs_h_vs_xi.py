@@ -22,6 +22,7 @@ import getpass
 def escape_basin_vs_h(args):
 
     xi, num_exits = args
+    grid = 1080 # Grid size
     # Define gamma
     gamma = 3
     # ---------------- #
@@ -49,7 +50,6 @@ def escape_basin_vs_h(args):
     N = int(1e6) # Number of collisions
     exponent = int(np.log10(N))
     base = int(N/10**(exponent))
-    grid = 1080 # Grid size
     # The path variable defines the path to where the data will be stored.
     path = "Data"
 
