@@ -1,6 +1,6 @@
 # tunable-billiard-escape
 
-Code repository accompanying the publication entitled "An investigation of escape and scaling properties of a billiard system".
+Code repository accompanying the publication entitled "[An investigation of escape and scaling properties of a billiard system](https://doi.org/10.1063/5.0222215)".
 
 This project contains the code to generate and plot the data from all figures.
 
@@ -63,6 +63,12 @@ To generate Figure 10, run all cells within the heading named ``` Fig. 11 ``` in
 ## Supplementary video
 
 To generate the data used in the Supplementary Video, run ``` python escape_basin_vs_h_vs_xi.py ```. It generates the escape basin for different values of the control parameter and different hole sizes. Then, run ``` python basin_entropy_from_data.py ```. It calculates the basin entropy and the basin boundary entropy given the escape basin data. To generate the Figures used in the Video, run  ``` python plot_supplementary.py ```. It plots the escape basins for changing parameter control with 6 different hole sizes.
+
+## Citation
+
+If you use this repository or parts of it in your work, please cite:
+
+M. Rolim Sales, D. Borin, D. R. da Costa, J. D. Szezech Jr., and E. D. Leonel, **An investigation of escape and scaling properties of a billiard system**, [*Chaos: An Interdisciplinary Journal of Nonlinear Science 34, 113122 (2024)*](https://doi.org/10.1063/5.0222215).
 
 ## Contact
 
