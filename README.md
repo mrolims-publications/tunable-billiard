@@ -66,10 +66,25 @@ To generate the data used in the Supplementary Video, run ``` python escape_basi
 
 ## Citation
 
-If you use this repository or parts of it in your work, please cite:
+If you use this repository or parts of it in your work, please consider citing our research paper:
 
-M. Rolim Sales, D. Borin, D. R. da Costa, J. D. Szezech Jr., and E. D. Leonel, **An investigation of escape and scaling properties of a billiard system**, [*Chaos: An Interdisciplinary Journal of Nonlinear Science 34, 113122 (2024)*](https://doi.org/10.1063/5.0222215).
+*M. Rolim Sales et al.*, **An investigation of escape and scaling properties of a billiard system**, *[Chaos 34, 113122 (2024)](https://doi.org/10.1063/5.0222215)*.
+
+```bibtex
+@article{RolimSales2024,
+author = {Rolim Sales, Matheus and Borin, Daniel and da Costa, Diogo Ricardo and Szezech Jr., José Danilo, and Leonel, Edson Denis},
+title = {An investigation of escape and scaling properties of a billiard system},
+journal = {Chaos: An Interdisciplinary Journal of Nonlinear Science},
+volume = {34},
+number = {11},
+pages = {113122},
+year = {2024},
+month = {11},
+doi = {10.1063/5.0222215},
+url = {https://doi.org/10.1063/5.0222215},
+}
+```
 
 ## Contact
 
-[matheusrolim95@gmail.com](mailto:matheusrolim95@gmail.com)
+[rolim.sales.m[at]gmail.com](mailto:rolim.sales.m@gmail.com)
